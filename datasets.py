@@ -181,7 +181,7 @@ class CalligraphyDataset(Dataset):
         return sample, 0
 
     
-def calligraphy(batch_size=16, size=64, path_to_data='./characters',
+def calligraphy(batch_size=16, size=64, path_to_data='./characters/imgs',
            shuffle=True):
     """Calligraphy dataloader.
 
