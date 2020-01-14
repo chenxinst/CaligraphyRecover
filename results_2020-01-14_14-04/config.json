@@ -1,0 +1,1 @@
+{"h_dim": 512, "z_dim": 512, "img_size": [3, 64, 64], "lr": 4e-05, "num_context_range": [12, 1500], "num_extra_target_range": [0, 1500], "epochs": 1000, "r_dim": 512, "dataset": "calligraphy", "batch_size": 16}
