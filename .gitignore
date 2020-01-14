@@ -1,3 +1,6 @@
 result*/
 imgs/
 lanting/
+*.pyc
+__pycache__/
+.vscode/

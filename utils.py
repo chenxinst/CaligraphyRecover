@@ -71,7 +71,7 @@ def img_mask_to_np_input(img, mask, normalize=True):
     # 1st and 2nd indices of nonzero_idx (in zero based indexing)
     x = nonzero_idx[:, 1:].view(batch_size, num_points, 2).float()
     # The y tensor for Neural Processes contains the values of non zero pixels
-    y = img[mask_img_size].view(batch_size, num_channels, num_points)
+    y = img[mask_img_size.bool()].view(batch_size, num_channels, num_points)
     # Ensure correct shape, i.e. (batch_size, num_points, num_channels)
     y = y.permute(0, 2, 1)
 
