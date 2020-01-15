@@ -201,8 +201,8 @@ def calligraphy(batch_size=16, size=64, path_to_data='./characters/imgs',
     transform = transforms.Compose([
         transforms.RandomHorizontalFlip(p=0.5),
         transforms.RandomVerticalFlip(p=0.5),
-        transforms.RandomRotation(60, resample=False, expand=False, center=None),
-        transforms.ColorJitter(brightness=0, contrast=0, saturation=0, hue=0),
+        # transforms.RandomRotation(60, resample=False, expand=False, center=None),
+        # transforms.ColorJitter(brightness=0, contrast=0, saturation=0, hue=0),
         transforms.ToTensor()
     ])
 

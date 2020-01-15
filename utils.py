@@ -213,7 +213,7 @@ def inpaint(model, img, context_mask, device):
     is_training = model.neural_process.training
     # For inpainting, use Neural Process in prediction mode
     model.neural_process.training = False
-    target_mask = 1 - context_mask  # All pixels which are not in context
+    target_mask = ~context_mask  # All pixels which are not in context
     # Add a batch dimension to tensors and move to GPU
     img_batch = img.unsqueeze(0).to(device)
     context_batch = context_mask.unsqueeze(0).to(device)
